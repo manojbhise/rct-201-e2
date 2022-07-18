@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaClipboard } from "react-icons/fa";
 import { ComponentWrapper, VariantWrapper } from "./App.styled";
 import { Avatar } from "./components/Avatar";
 import { Button } from "./components/Button";
+import { Pagination } from "./components/Pagination";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(5);
+
   return (
     <div className="App">
       {/* Different Buttons */}
@@ -64,6 +67,14 @@ function App() {
           <Avatar size="sm" name="Baburoa" />
           <Avatar size="md" name="Albert S" />
           <Avatar size="lg" name="Ritesh Firodiya" />
+        </VariantWrapper>
+        <VariantWrapper>
+          <h3>Pagination</h3>
+        <Pagination
+            count={10}
+            currentPage={currentPage}
+            updateCurrentPage={()=>setCurrentPage(5)}
+          />
         </VariantWrapper>
       </ComponentWrapper>
     </div>
