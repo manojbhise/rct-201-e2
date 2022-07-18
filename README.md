@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+## Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Complete the Pagination component.
+   - Props:
+     - `total` decides how many pages will be there. eg: `<Pagination total={10}>`
+     - `selected` decides which page is currently selected.
+     - `onPageChange` is a call back when user changes page number
+   - [Design Inspiration from ANT Design](https://ant.design/components/pagination/).
+   - Features
+     - Go Next, disabled on last page.
+     - Go Previous, disabled on first page.
+     - Selected page must be highlighted with a blue border.
+     - `Pagination` component will need one more `PageCell` component which represents one single box
+2. Write Test for Following Components:
+   - [Button](./src/components/Button/Button.tsx)
+   - [Avatar](./src/components/Avatar/Avatar.tsx)
+   - [Pagination](./src/components/Pagination/Pagination.tsx)
 
-## Available Scripts
+Note: Testings should demonstrate various funtionalty that component has as mentioned in App.jsx file.
 
-In the project directory, you can run:
+Hints:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. You need to add `data-testid`, wherever required.
+2. Test case like `should exists in dom` or cases that checks only existance of elements have no weightage at all, and are completely discarded
+3. Test cases are checked based on coverage so make sure you write enough test cases for each and every component
